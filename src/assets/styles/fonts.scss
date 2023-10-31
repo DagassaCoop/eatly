@@ -1,0 +1,57 @@
+// FONTS
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  font-style: normal;
+  src: local('Poppins-Regular'), url(@/assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  font-style: normal;
+  src: local('Poppins-Bold'), url(@/assets/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  font-style: normal;
+  src: local('Inter-Regular'), url(@/assets/fonts/Inter/static/Inter-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope-Regular';
+  font-style: normal;
+  src: local('Manrope-Regular'), url(@/assets/fonts/Manrope/static/Manrope-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  font-style: normal;
+  src: local('PlusJakartaSans-Regular'), url(@/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf) format('truetype');
+}
+
+// CLASSES
+
+.poppins {
+  font-family: 'Poppins-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.inter {
+  font-family: 'Inter-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.manrope {
+  font-family: 'Manrope-Regular';
+  font-weight: normal;
+  font-style: normal;
+}

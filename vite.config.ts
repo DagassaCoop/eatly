@@ -3,7 +3,6 @@ import { fileURLToPath, URL } from "url"
 import vue from "@vitejs/plugin-vue"
 import eslint from "vite-plugin-eslint"
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
@@ -20,5 +19,16 @@ export default defineConfig({
         replacement: fileURLToPath(new URL("./src", import.meta.url))
       }
     ]
+  },
+  css: {
+    preprocessorOptions: {
+      // use next imports for every .scss file or part of code as in .vue files
+      scss: {
+        additionalData: `
+          @import "@/assets/styles/common.scss"; 
+          @import "@/assets/styles/fonts.scss";
+        `
+      }
+    }
   }
 })

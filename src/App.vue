@@ -1,28 +1,58 @@
-<script setup lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <header class="header">
-    <RouterLink :to="{ name: 'home' }"> Home page </RouterLink>
-    <RouterLink :to="{ name: 'about' }"> About page </RouterLink>
-  </header>
-  <main class="main">
-    <RouterView />
-  </main>
+  <v-layout>
+    <div class="container">
+      <HeaderComponent />
+      <hr />
+    </div>
+
+    <main class="main">
+      <RouterView />
+    </main>
+
+    <footer>Footer</footer>
+  </v-layout>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup lang="ts">
+import HeaderComponent from "@/components/HeaderComponent.vue"
+import { useGlobalStore } from "@/store/GlobalStore"
+import { ref, onMounted, nextTick, onBeforeUnmount, watch } from "vue"
+import { EWindow } from "@/interfaces/stores/GlobalStore"
+
+const global = useGlobalStore()
+const windowWidth = ref(window.innerWidth)
+
+watch(windowWidth, () => {
+  let window: EWindow = EWindow.mobile
+
+  if (windowWidth.value < 600) {
+    window = EWindow.mobile
+  } else if (windowWidth.value >= 600 && windowWidth.value < 1280) {
+    window = EWindow.tablet
+  } else {
+    window = EWindow.desktop
+  }
+
+  global.setWindow(window)
+})
+
+const onResize = () => {
+  windowWidth.value = window.innerWidth
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+onMounted(() => {
+  nextTick(() => {
+    window.addEventListener("resize", onResize)
+  })
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", onResize)
+})
+</script>
+
+<style scoped lang="scss">
+.v-layout {
+  display: block;
 }
 </style>

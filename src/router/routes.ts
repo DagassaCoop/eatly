@@ -1,5 +1,8 @@
-import Home from "@/pages/HomeView.vue"
-import About from "@/pages/AboutView.vue"
+import Home from "@/pages/HomeView/HomeView.vue"
+import Menu from "@/pages/MenuView.vue"
+import Blog from "@/pages/BlogView.vue"
+import Pricing from "@/pages/PricingView.vue"
+import Contact from "@/pages/ContactView.vue"
 
 export const routes = [
   {
@@ -8,8 +11,23 @@ export const routes = [
     component: Home
   },
   {
-    name: "about",
-    path: "/about",
-    component: About
+    name: "menu",
+    path: "/menu",
+    component: Menu
+  },
+  {
+    name: "blog",
+    path: "/blog",
+    component: Blog
+  },
+  {
+    name: "pricing",
+    path: "/pricing",
+    component: Pricing
+  },
+  {
+    name: "contact",
+    path: "/contact",
+    component: Contact
   }
 ]
