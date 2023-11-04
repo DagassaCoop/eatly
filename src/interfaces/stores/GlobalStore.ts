@@ -6,4 +6,7 @@ export enum EWindow {
 
 export interface IGlobalStore {
   window: EWindow
+  windowClasses: {
+    [key in EWindow]: string
+  }
 }

@@ -1,10 +1,18 @@
 // CONSTANTS
 
-$main-dark: #6C5FBC;
-$main-normal: #5C4EAE;
-$main-light: #A596FF;
+$violet-dark: #6C5FBC;
+$violet-normal: #5C4EAE;
+$violet-light: #A596FF;
+$text-black-main: #323142;
+$text-black-second: #201F1F;
+$text-grey-main: #676767;
+$text-gray-second: #ACADB9;
 
 // GLOBAL CLASSES
+
+* {
+  box-sizing: border-box;
+}
 
 hr {
   height: 0.5px;
@@ -12,10 +20,27 @@ hr {
 }
 
 h1 {
+  @extend .poppins-bold;
+  color: $text-black-second;
+}
+
+.btn {
+  cursor: pointer;
+
   @extend .poppins;
-  font-size: 46px;
-  line-height: 54px;
-  color: #201F1F;
+
+  padding: 14px 24px;
+  border-radius: 10px;
+
+  &_filled {
+    background-color: $violet-dark;
+    color: #FFFFFF;
+  }
+
+  &_outlined {
+    border: 1px solid $violet-dark;
+    color: $violet-dark;
+  }
 }
 
 // MEDIA

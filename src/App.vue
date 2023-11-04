@@ -9,7 +9,7 @@
       <RouterView />
     </main>
 
-    <footer>Footer</footer>
+    <!-- <footer>Footer</footer> -->
   </v-layout>
 </template>
 
@@ -54,5 +54,6 @@ onBeforeUnmount(() => {
 <style scoped lang="scss">
 .v-layout {
   display: block;
+  background-color: #f9f9f9;
 }
 </style>

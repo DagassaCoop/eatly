@@ -105,7 +105,7 @@ const navList: Array<{
 
     &-title {
       @extend .poppins-bold;
-      color: $main-dark;
+      color: $violet-dark;
       font-size: 21px;
       line-height: 27.5px;
     }
@@ -123,19 +123,19 @@ const navList: Array<{
       border-radius: 12px;
 
       &-icon {
-        color: $main-dark;
+        color: $violet-dark;
       }
 
       &-title {
         @extend .poppins;
         text-transform: uppercase;
-        color: $main-dark;
+        color: $violet-dark;
         font-size: 18px;
         line-height: 21px;
       }
 
       &_active {
-        background-color: $main-dark;
+        background-color: $violet-dark;
         .header__drawer-item {
           &-icon,
           &-title {

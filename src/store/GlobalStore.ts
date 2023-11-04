@@ -4,7 +4,12 @@ import { defineStore } from "pinia"
 export const useGlobalStore = defineStore("global", {
   state: (): IGlobalStore => {
     return {
-      window: EWindow.mobile
+      window: EWindow.mobile,
+      windowClasses: {
+        [EWindow.mobile]: "mobile",
+        [EWindow.tablet]: "tablet",
+        [EWindow.desktop]: "desctop"
+      }
     }
   },
   getters: {},
