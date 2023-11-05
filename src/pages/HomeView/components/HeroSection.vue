@@ -48,11 +48,12 @@
         <div class="hero__food-graph">
           <div class="hero__food-graph-period">
             <button
-              v-for="(item, index) in ['Main', 'Weekly', 'Montly', 'Yearly']"
+              v-for="(period, index) in graphPeriods"
               :key="index"
-              :class="['hero__food-graph-period-item', index === 0 ? 'active' : '']"
+              :class="['hero__food-graph-period-item', period.active ? 'active' : '']"
+              @click="setGraphListNewActive(index, graphPeriods)"
             >
-              {{ item }}
+              {{ period.str }}
             </button>
           </div>
           <div class="hero__food-graph-chart">
@@ -119,11 +120,12 @@
           </div>
           <div class="hero__food-graph-graphic-systems">
             <button
-              v-for="(item, index) in ['2D', '4D', '5D', '6D', '7D']"
+              v-for="(system, index) in graphGraphicSystems"
               :key="index"
-              :class="['hero__food-graph-graphic-systems-item', index == 0 ? 'active' : '']"
+              :class="['hero__food-graph-graphic-systems-item', system.active ? 'active' : '']"
+              @click="setGraphListNewActive(index, graphGraphicSystems)"
             >
-              {{ item }}
+              {{ system.str }}
             </button>
           </div>
           <img
@@ -145,12 +147,68 @@ import heroFoodGraphChart from "@/assets/images/home/hero-food-graph-chart.svg"
 import heroFoodImageArrow from "@/assets/images/home/hero-food-image-arrow.svg"
 import heroFoodInfoIllustrationTop from "@/assets/images/home/hero-food-illustration-top.svg"
 import heroFoodGraphIllustrationButtom from "@/assets/images/home/hero-food-illustration-buttom.svg"
+import { ref } from "vue"
+import { Ref } from "vue"
+
+type TGraphListItem = {
+  str: string
+  active: boolean
+}
+
+const graphPeriods: Ref<Array<TGraphListItem>> = ref([
+  {
+    str: "Main",
+    active: true
+  },
+  {
+    str: "Weekly",
+    active: false
+  },
+  {
+    str: "Montly",
+    active: false
+  },
+  {
+    str: "Yearly",
+    active: false
+  }
+])
+
+const graphGraphicSystems: Ref<Array<TGraphListItem>> = ref([
+  {
+    str: "2D",
+    active: true
+  },
+  {
+    str: "4D",
+    active: false
+  },
+  {
+    str: "5D",
+    active: false
+  },
+  {
+    str: "6D",
+    active: false
+  },
+  {
+    str: "7D",
+    active: false
+  }
+])
+
+const setGraphListNewActive = (index: number, list: Array<TGraphListItem>) => {
+  list.forEach((period: TGraphListItem, periodsIndex: number) => {
+    period.active = index === periodsIndex ? true : false
+  })
+}
 </script>
 
 <style scoped lang="scss">
 .hero {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 100px;
 
   &__section {
     display: flex;

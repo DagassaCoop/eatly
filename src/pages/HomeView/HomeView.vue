@@ -1,11 +1,13 @@
 <template>
   <div :class="['home-page', global.windowClasses[global.window]]">
     <HeroSection />
+    <FeaturesSection />
   </div>
 </template>
 
 <script setup lang="ts">
-import HeroSection from "./components/hero/HeroSection.vue"
+import HeroSection from "./components/HeroSection.vue"
+import FeaturesSection from "./components/FeaturesSection.vue"
 
 import { useGlobalStore } from "@/store/GlobalStore"
 
