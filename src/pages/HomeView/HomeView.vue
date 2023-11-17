@@ -2,12 +2,17 @@
   <div :class="['home-page', global.windowClasses[global.window]]">
     <HeroSection />
     <FeaturesSection />
+    <MobileSection />
+    <hr />
+    <TopRestaurantsSection />
   </div>
 </template>
 
 <script setup lang="ts">
 import HeroSection from "./components/HeroSection.vue"
 import FeaturesSection from "./components/FeaturesSection.vue"
+import MobileSection from "./components/MobileSection.vue"
+import TopRestaurantsSection from "./components/TopRestaurantsSection.vue"
 
 import { useGlobalStore } from "@/store/GlobalStore"
 
@@ -25,6 +30,15 @@ const global = useGlobalStore()
     }
   }
 
+  &__subtitle {
+    font-size: 30px;
+    line-height: 34px;
+
+    span {
+      color: $violet-normal;
+    }
+  }
+
   &__description {
     @extend .inter;
     color: $text-grey-main;
@@ -34,6 +48,14 @@ const global = useGlobalStore()
     span {
       color: $violet-normal;
     }
+  }
+
+  &.sticky {
+    padding-top: 100px;
+  }
+
+  hr {
+    background-color: #cbcbcb;
   }
 }
 </style>

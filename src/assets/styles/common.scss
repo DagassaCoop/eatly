@@ -20,7 +20,7 @@ hr {
   background-color: #CBCBCB;
 }
 
-h1 {
+h1, h2 {
   @extend .poppins-bold;
   color: $text-black-second;
 }
@@ -44,10 +44,16 @@ h1 {
   }
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
 // MEDIA
 
 @media screen and (max-width: 600px) {
   .container {
-    padding: 30px;
+    padding: 30px !important;
   }
 }
