@@ -5,6 +5,7 @@
     <MobileSection />
     <hr />
     <TopRestaurantsSection />
+    <hr />
   </div>
 </template>
 
