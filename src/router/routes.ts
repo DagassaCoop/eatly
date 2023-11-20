@@ -21,6 +21,11 @@ export const routes = [
     component: Home // todo > replace normal page
   },
   {
+    name: "dishes",
+    path: "/menu/dishes",
+    component: Home // todo > replace normal page
+  },
+  {
     name: "blog",
     path: "/blog",
     component: Blog

@@ -1,23 +1,23 @@
 <template>
-  <div class="restaurant">
-    <div class="restaurant__img" :style="{ backgroundImage: `url(${restaurant.img})` }" />
-    <div class="restaurant__info">
-      <div class="restaurant__info-text">
-        <div class="restaurant__info-tags">
+  <div class="restaurant-preview">
+    <div class="restaurant-preview__img" :style="{ backgroundImage: `url(${restaurant.img})` }" />
+    <div class="restaurant-preview__info">
+      <div class="restaurant-preview__info-text">
+        <div class="restaurant-preview__info-tags">
           <div
             v-for="(tag, index) in restaurant.tags"
             :key="index"
-            class="restaurant__info-tags-item"
+            class="restaurant-preview__info-tags-item"
             :style="tags_style[tag]"
           >
             {{ ERestaurantTags[tag] }}
           </div>
         </div>
-        <h4 class="restaurant__info-title">{{ restaurant.name }}</h4>
-        <div class="restaurant__info-dop">
-          <span class="restaurant__info-time">{{ restaurant.timeAvg }}min •</span>
+        <h4 class="restaurant-preview__info-title">{{ restaurant.name }}</h4>
+        <div class="restaurant-preview__info-dop">
+          <span class="restaurant-preview__info-time">{{ restaurant.timeAvg }}min •</span>
           <svg
-            class="restaurant__info-star"
+            class="restaurant-preview__info-star"
             xmlns="http://www.w3.org/2000/svg"
             width="22"
             height="22"
@@ -44,11 +44,11 @@
             </mask>
             <g mask="url(#mask0_1_5425)"></g>
           </svg>
-          <span class="restaurant__info-rate">{{ restaurant.rate }}</span>
+          <span class="restaurant-preview__info-rate">{{ restaurant.rate }}</span>
         </div>
       </div>
-      <div class="restaurant__info-save-btn">
-        <v-icon class="mdi mdi-bookmark restaurant__info-save-btn-icon" />
+      <div class="restaurant-preview__info-save-btn">
+        <v-icon class="mdi mdi-bookmark restaurant-preview__info-save-btn-icon" />
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@ const tags_style: {
 </script>
 
 <style scoped lang="scss">
-.restaurant {
+.restaurant-preview {
   display: flex;
   flex-wrap: wrap;
   border-radius: 24px;
@@ -117,7 +117,7 @@ const tags_style: {
     }
 
     &-title {
-      @extend .poppins-bold;
+      @extend .poppins-semibold;
       color: $text-black-main;
       width: 100%;
       text-align: left;

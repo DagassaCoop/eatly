@@ -6,6 +6,7 @@
     <hr />
     <TopRestaurantsSection />
     <hr />
+    <TopDishes />
   </div>
 </template>
 
@@ -13,7 +14,8 @@
 import HeroSection from "./components/HeroSection.vue"
 import FeaturesSection from "./components/FeaturesSection.vue"
 import MobileSection from "./components/MobileSection.vue"
-import TopRestaurantsSection from "./components/TopRestaurantsSection.vue"
+import TopRestaurantsSection from "@/shared/sections/TopRestaurantsSection.vue"
+import TopDishes from "@/shared/sections/TopDishes.vue"
 
 import { useGlobalStore } from "@/store/GlobalStore"
 

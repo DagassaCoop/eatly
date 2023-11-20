@@ -8,14 +8,16 @@
       <RestaurantPreview v-for="(item, index) in restaurants" :key="index" :restaurant="item" />
     </div>
     <div class="top-restaurants__all">
-      <RouterLink class="top-restaurants__all-link" :to="{ name: 'restaurants' }">View All</RouterLink>
+      <RouterLink class="top-restaurants__all-link" :to="{ name: 'restaurants' }"
+        >View All</RouterLink
+      >
       <img class="top-restaurants__all-arrow" :src="arrow" alt="arrow" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import RestaurantPreview from "@/components/RestaurantPreview.vue"
+import RestaurantPreview from "@/shared/components/RestaurantPreview.vue"
 import { ERestaurantTags, IRestaurantPreview } from "@/interfaces/retaurant"
 
 import restaurantPreviewImgOne from "@/assets/images/home/top-restaurants-1.jpeg"

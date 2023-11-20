@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import HeaderComponent from "@/components/HeaderComponent.vue"
+import HeaderComponent from "@/shared/components/HeaderComponent.vue"
 import { useGlobalStore } from "@/store/GlobalStore"
 import { ref, onMounted, nextTick, onBeforeUnmount, watch } from "vue"
 import { EWindow } from "@/interfaces/stores/GlobalStore"
