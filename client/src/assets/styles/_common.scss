@@ -1,0 +1,80 @@
+// CONSTANTS
+
+$violet-dark: #6C5FBC;
+$violet-normal: #5C4EAE;
+$violet-light: #A596FF;
+$text-black-main: #323142;
+$text-black-second: #201F1F;
+$text-grey-main: #676767;
+$text-gray-second: #ACADB9;
+$text-violet-second: #C5BFED;
+
+// GLOBAL CLASSES
+
+* {
+  box-sizing: border-box;
+}
+  
+
+hr {
+  height: 0.5px;
+  background-color: #CBCBCB;
+}
+  
+
+h1, h2 {
+  @extend .poppins-bold !optional;
+  color: $text-black-second;
+}
+  
+
+.btn {
+  cursor: pointer;
+
+  @extend .poppins-semibold !optional;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 14px 24px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+
+  &_filled {
+    background-color: $violet-dark;
+    color: #FFFFFF;
+  }
+    
+
+  &_outlined {
+    border: 1px solid $violet-dark;
+    color: $violet-dark;
+  }
+    
+
+  &-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid $violet-dark;
+  }
+    
+
+  // & {
+  //   border: 0;
+  //   border-radius: 0;
+  //   flex: 1;
+  // }
+      
+}
+  
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+  

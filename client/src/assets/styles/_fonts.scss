@@ -1,0 +1,135 @@
+// FONTS
+
+@font-face {
+  font-family: 'Poppins-Regular';
+  font-style: normal;
+  src: local('Poppins-Regular'), url(@/assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  font-style: normal;
+  src: local('Poppins-SemiBold'), url(@/assets/fonts/Poppins/Poppins-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  font-style: normal;
+  src: local('Poppins-Bold'), url(@/assets/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-Regular';
+  font-style: normal;
+  src: local('Inter-Regular'), url(@/assets/fonts/Inter/static/Inter-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-SemiBold';
+  font-style: normal;
+  src: local('Inter-SemiBold'), url(@/assets/fonts/Inter/static/Inter-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  font-style: normal;
+  src: local('Inter-Bold'), url(@/assets/fonts/Inter/static/Inter-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope-Regular';
+  font-style: normal;
+  src: local('Manrope-Regular'), url(@/assets/fonts/Manrope/static/Manrope-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Manrope-Bold';
+  font-style: normal;
+  src: local('Manrope-Bold'), url(@/assets/fonts/Manrope/static/Manrope-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  font-style: normal;
+  src: local('PlusJakartaSans-Regular'), url(@/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PublicSans-Regular';
+  font-style: normal;
+  src: local('PublicSans-Regular'), url(@/assets/fonts/Public_Sans/static/PublicSans-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'PublicSans-Bold';
+  font-style: normal;
+  src: local('PublicSans-Bold'), url(@/assets/fonts/Public_Sans/static/PublicSans-Bold.ttf) format('truetype');
+}
+
+// CLASSES
+
+.poppins {
+  font-family: 'Poppins-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: 'Poppins-SemiBold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: 'Poppins-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.inter {
+  font-family: 'Inter-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.inter-semibold {
+  font-family: 'Inter-SemiBold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.inter-bold {
+  font-family: 'Inter-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.manrope {
+  font-family: 'Manrope-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.manrope-bold {
+  font-family: 'Manrope-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.plus-jakarta-sans {
+  font-family: 'PlusJakartaSans-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.public-sans {
+  font-family: 'PublicSans-Regular';
+  font-weight: normal;
+  font-style: normal;
+}
+
+.public-sans-bold {
+  font-family: 'PublicSans-Bold';
+  font-weight: normal;
+  font-style: normal;
+}
